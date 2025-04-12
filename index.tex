@@ -1,0 +1,404 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\PassOptionsToPackage{dvipsnames,svgnames,x11names}{xcolor}
+%
+\documentclass[
+  letterpaper,
+  DIV=11,
+  numbers=noendperiod]{scrreprt}
+
+\usepackage{amsmath,amssymb}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else  
+    % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\setcounter{secnumdepth}{5}
+% Make \paragraph and \subparagraph free-standing
+\makeatletter
+\ifx\paragraph\undefined\else
+  \let\oldparagraph\paragraph
+  \renewcommand{\paragraph}{
+    \@ifstar
+      \xxxParagraphStar
+      \xxxParagraphNoStar
+  }
+  \newcommand{\xxxParagraphStar}[1]{\oldparagraph*{#1}\mbox{}}
+  \newcommand{\xxxParagraphNoStar}[1]{\oldparagraph{#1}\mbox{}}
+\fi
+\ifx\subparagraph\undefined\else
+  \let\oldsubparagraph\subparagraph
+  \renewcommand{\subparagraph}{
+    \@ifstar
+      \xxxSubParagraphStar
+      \xxxSubParagraphNoStar
+  }
+  \newcommand{\xxxSubParagraphStar}[1]{\oldsubparagraph*{#1}\mbox{}}
+  \newcommand{\xxxSubParagraphNoStar}[1]{\oldsubparagraph{#1}\mbox{}}
+\fi
+\makeatother
+
+
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}\usepackage{longtable,booktabs,array}
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\usepackage{graphicx}
+\makeatletter
+\newsavebox\pandoc@box
+\newcommand*\pandocbounded[1]{% scales image to fit in text height/width
+  \sbox\pandoc@box{#1}%
+  \Gscale@div\@tempa{\textheight}{\dimexpr\ht\pandoc@box+\dp\pandoc@box\relax}%
+  \Gscale@div\@tempb{\linewidth}{\wd\pandoc@box}%
+  \ifdim\@tempb\p@<\@tempa\p@\let\@tempa\@tempb\fi% select the smaller of both
+  \ifdim\@tempa\p@<\p@\scalebox{\@tempa}{\usebox\pandoc@box}%
+  \else\usebox{\pandoc@box}%
+  \fi%
+}
+% Set default figure placement to htbp
+\def\fps@figure{htbp}
+\makeatother
+% definitions for citeproc citations
+\NewDocumentCommand\citeproctext{}{}
+\NewDocumentCommand\citeproc{mm}{%
+  \begingroup\def\citeproctext{#2}\cite{#1}\endgroup}
+\makeatletter
+ % allow citations to break across lines
+ \let\@cite@ofmt\@firstofone
+ % avoid brackets around text for \cite:
+ \def\@biblabel#1{}
+ \def\@cite#1#2{{#1\if@tempswa , #2\fi}}
+\makeatother
+\newlength{\cslhangindent}
+\setlength{\cslhangindent}{1.5em}
+\newlength{\csllabelwidth}
+\setlength{\csllabelwidth}{3em}
+\newenvironment{CSLReferences}[2] % #1 hanging-indent, #2 entry-spacing
+ {\begin{list}{}{%
+  \setlength{\itemindent}{0pt}
+  \setlength{\leftmargin}{0pt}
+  \setlength{\parsep}{0pt}
+  % turn on hanging indent if param 1 is 1
+  \ifodd #1
+   \setlength{\leftmargin}{\cslhangindent}
+   \setlength{\itemindent}{-1\cslhangindent}
+  \fi
+  % set entry spacing
+  \setlength{\itemsep}{#2\baselineskip}}}
+ {\end{list}}
+\usepackage{calc}
+\newcommand{\CSLBlock}[1]{\hfill\break\parbox[t]{\linewidth}{\strut\ignorespaces#1\strut}}
+\newcommand{\CSLLeftMargin}[1]{\parbox[t]{\csllabelwidth}{\strut#1\strut}}
+\newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth - \csllabelwidth}{\strut#1\strut}}
+\newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
+
+\KOMAoption{captions}{tableheading}
+\makeatletter
+\@ifpackageloaded{bookmark}{}{\usepackage{bookmark}}
+\makeatother
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\AtBeginDocument{%
+\ifdefined\contentsname
+  \renewcommand*\contentsname{Table of contents}
+\else
+  \newcommand\contentsname{Table of contents}
+\fi
+\ifdefined\listfigurename
+  \renewcommand*\listfigurename{List of Figures}
+\else
+  \newcommand\listfigurename{List of Figures}
+\fi
+\ifdefined\listtablename
+  \renewcommand*\listtablename{List of Tables}
+\else
+  \newcommand\listtablename{List of Tables}
+\fi
+\ifdefined\figurename
+  \renewcommand*\figurename{Figure}
+\else
+  \newcommand\figurename{Figure}
+\fi
+\ifdefined\tablename
+  \renewcommand*\tablename{Table}
+\else
+  \newcommand\tablename{Table}
+\fi
+}
+\@ifpackageloaded{float}{}{\usepackage{float}}
+\floatstyle{ruled}
+\@ifundefined{c@chapter}{\newfloat{codelisting}{h}{lop}}{\newfloat{codelisting}{h}{lop}[chapter]}
+\floatname{codelisting}{Listing}
+\newcommand*\listoflistings{\listof{codelisting}{List of Listings}}
+\makeatother
+\makeatletter
+\makeatother
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\@ifpackageloaded{subcaption}{}{\usepackage{subcaption}}
+\makeatother
+
+\usepackage{bookmark}
+
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same} % disable monospaced font for URLs
+\hypersetup{
+  pdftitle={SCALES\_Lab\_Handbook},
+  pdfauthor={William Murrah},
+  colorlinks=true,
+  linkcolor={blue},
+  filecolor={Maroon},
+  citecolor={Blue},
+  urlcolor={Blue},
+  pdfcreator={LaTeX via pandoc}}
+
+
+\title{SCALES\_Lab\_Handbook}
+\author{William Murrah}
+\date{2025-04-12}
+
+\begin{document}
+\maketitle
+
+\renewcommand*\contentsname{Table of contents}
+{
+\hypersetup{linkcolor=}
+\setcounter{tocdepth}{2}
+\tableofcontents
+}
+
+\bookmarksetup{startatroot}
+
+\chapter*{Preface}\label{preface}
+\addcontentsline{toc}{chapter}{Preface}
+
+\markboth{Preface}{Preface}
+
+Absolutely! Here's a warm, compelling introduction you can use on your
+SCALES Lab website homepage --- tailored to appeal to students, faculty,
+and collaborators:
+
+⸻
+
+Welcome to the SCALES Lab
+
+Study of Cognition and Learning in Educational Systems
+
+At the SCALES Lab, we believe that education is more than a set of
+classrooms and policies --- it's a dynamic, interdependent system where
+cognition, community, resources, and environments interact in complex
+ways. Our mission is to advance research that helps us better understand
+this complexity and, ultimately, use that understanding to improve
+educational outcomes.
+
+We combine cutting-edge tools from cognitive science, ecology, AI and
+machine learning, and education policy to model how learning unfolds
+within real-world systems. Whether we're simulating school environments
+with agent-based models, analyzing national datasets using Bayesian
+methods, or using AI to discover new causal relationships, our goal is
+always the same: to build theory-driven, policy-relevant research that
+reflects the realities of students, educators, and communities.
+
+Who We Are
+
+SCALES is a collaborative research space for graduate students, faculty,
+and partners who are curious, rigorous, and ready to rethink how we
+study education. We welcome scholars from diverse disciplines ---
+especially those who care about educational equity, systems-level
+change, and developing stronger methods for understanding how learning
+happens.
+
+What We Do • Build ecological models of learning and achievement • Use
+AI and simulation to test educational theories • Develop new tools for
+causal inference and data integration • Mentor students in cutting-edge
+methods and policy-relevant research • Collaborate across institutions,
+disciplines, and communities
+
+⸻
+
+Would you like variations of this message tailored for: • Undergraduate
+and graduate student recruitment, • Researcher/PI collaboration, or •
+Public and policy audiences?
+
+I can also help build out full site sections like Projects, Join the
+Lab, People, or News \& Events.
+
+\bookmarksetup{startatroot}
+
+\chapter{Introduction}\label{introduction}
+
+\bookmarksetup{startatroot}
+
+\chapter{Summary}\label{summary}
+
+In summary, this book has no content whatsoever.
+
+\bookmarksetup{startatroot}
+
+\chapter{Conferences}\label{conferences}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 14\tabcolsep) * \real{0.1085}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 14\tabcolsep) * \real{0.1550}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 14\tabcolsep) * \real{0.1473}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 14\tabcolsep) * \real{0.1628}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 14\tabcolsep) * \real{0.0775}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 14\tabcolsep) * \real{0.1008}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 14\tabcolsep) * \real{0.1318}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 14\tabcolsep) * \real{0.1163}}@{}}
+\caption{SCALES Lab Recommended Professioal Organizations and
+Conferences}\tabularnewline
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Organization
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Research Alignment
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Conference Timing
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Submission Deadline
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Location
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Annual Dues
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Primary Journal
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Impact Factor
+\end{minipage} \\
+\midrule\noalign{}
+\endfirsthead
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Organization
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Research Alignment
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Conference Timing
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Submission Deadline
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Location
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Annual Dues
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Primary Journal
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Impact Factor
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\href{https://cognitivesciencesociety.org}{Cognitive Science Society
+(CogSci)} & Cognitive science, computational modeling, theory
+development & July 30 -- Aug 2, 2025 & Feb 3, 2025 & San Francisco, CA &
+Regular: \$105; Student: \$55 &
+\href{https://onlinelibrary.wiley.com/journal/15516709}{Cognitive
+Science} & 2.3 \\
+\href{https://www.isls.org}{International Society of the Learning
+Sciences (ISLS)} & Learning sciences, educational technology,
+collaborative learning & June 10--13, 2025 & Nov 27, 2024 & Helsinki,
+Finland & Regular: \$100; Student: \$50 &
+\href{https://www.tandfonline.com/journals/hlns20}{Journal of the
+Learning Sciences} & 4.0 \\
+\href{https://www.isss.org}{International Society for Systems Sciences
+(ISSS)} & Systems thinking, ecological modeling, interdisciplinary
+research & July 2025 & Mar--Apr 2025 & Varies annually & Regular: \$150;
+Student: \$50 &
+\href{https://onlinelibrary.wiley.com/journal/10991743}{Systems Research
+and Behavioral Science} & 1.6 \\
+\href{https://www.icabm.org}{International Congress on Agent-Based
+Modeling (ICABM)} & Agent-based modeling, simulation, complex systems &
+Varies & Varies & Varies & Regular: \$100; Student: \$50 &
+\href{https://jasss.soc.surrey.ac.uk}{Journal of Artificial Societies
+and Social Simulation} & 2.0 \\
+\href{https://www.aera.net}{American Educational Research Association
+(AERA)} & Education research, policy, methodology & Apr 23--27, 2025 &
+Jul--Aug 2024 & Denver, CO & Regular: \$250; Student: \$75 &
+\href{https://journals.sagepub.com/home/edr}{Educational Researcher} &
+5.0 \\
+\href{https://aefpweb.org}{Association for Education Finance and Policy
+(AEFP)} & Education finance, policy analysis, quantitative methods &
+March 2025 & Oct--Nov 2024 & Varies annually & Regular: \$150; Student:
+\$50 & \href{https://direct.mit.edu/edfp}{Education Finance and Policy}
+& 2.1 \\
+\href{https://aaai.org}{Association for the Advancement of Artificial
+Intelligence (AAAI)} & Artificial intelligence, machine learning, AI in
+education & Feb 25 -- Mar 4, 2025 & Aug 2024 & Philadelphia, PA &
+Regular: \$125; Student: \$50 &
+\href{https://www.aaai.org/Magazine/magazine.php}{AI Magazine} & 1.7 \\
+\href{https://educationaldatamining.org}{International Educational Data
+Mining Society (IEDMS)} & Educational data mining, learning analytics,
+AI applications & July 2025 & Jan--Feb 2025 & Varies annually & Regular:
+\$100; Student: \$50 &
+\href{https://jedm.educationaldatamining.org}{Journal of Educational
+Data Mining} & 1.5 \\
+\href{https://sase.org}{Society for the Advancement of Socio-Economics
+(SASE)} & Socio-economic systems, interdisciplinary policy research &
+June 2025 & Jan--Feb 2025 & Varies annually & Regular: \$150; Student:
+\$50 & \href{https://academic.oup.com/ser}{Socio-Economic Review} &
+3.2 \\
+\href{https://www.sree.org}{Society for Research on Educational
+Effectiveness (SREE)} & Educational effectiveness, causal inference,
+policy evaluation & March 2025 & Sept--Oct 2024 & Varies annually &
+Regular: \$200; Student: \$75 &
+\href{https://www.tandfonline.com/journals/uree20}{Journal of Research
+on Educational Effectiveness} & 2.9 \\
+\href{https://imbes.org}{International Mind, Brain, and Education
+Society (IMBES)} & Cognitive neuroscience, education, interdisciplinary
+research & 2026 (Biennial) & TBD & Varies & Regular: \$100; Student:
+\$50 & \href{https://onlinelibrary.wiley.com/journal/1751228x}{Mind,
+Brain, and Education} & 2.5 \\
+\end{longtable}
+
+\bookmarksetup{startatroot}
+
+\chapter*{References}\label{references}
+\addcontentsline{toc}{chapter}{References}
+
+\markboth{References}{References}
+
+\phantomsection\label{refs}
+\begin{CSLReferences}{0}{1}
+\end{CSLReferences}
+
+
+
+
+\end{document}

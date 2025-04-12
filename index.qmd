@@ -1,5 +1,33 @@
 # Preface {.unnumbered}
 
-This is a Quarto book.
+Absolutely! Here’s a warm, compelling introduction you can use on your SCALES Lab website homepage — tailored to appeal to students, faculty, and collaborators:
 
-To learn more about Quarto books visit <https://quarto.org/docs/books>.
+⸻
+
+Welcome to the SCALES Lab
+
+Study of Cognition and Learning in Educational Systems
+
+At the SCALES Lab, we believe that education is more than a set of classrooms and policies — it’s a dynamic, interdependent system where cognition, community, resources, and environments interact in complex ways. Our mission is to advance research that helps us better understand this complexity and, ultimately, use that understanding to improve educational outcomes.
+
+We combine cutting-edge tools from cognitive science, ecology, AI and machine learning, and education policy to model how learning unfolds within real-world systems. Whether we’re simulating school environments with agent-based models, analyzing national datasets using Bayesian methods, or using AI to discover new causal relationships, our goal is always the same: to build theory-driven, policy-relevant research that reflects the realities of students, educators, and communities.
+
+Who We Are
+
+SCALES is a collaborative research space for graduate students, faculty, and partners who are curious, rigorous, and ready to rethink how we study education. We welcome scholars from diverse disciplines — especially those who care about educational equity, systems-level change, and developing stronger methods for understanding how learning happens.
+
+What We Do
+	•	Build ecological models of learning and achievement
+	•	Use AI and simulation to test educational theories
+	•	Develop new tools for causal inference and data integration
+	•	Mentor students in cutting-edge methods and policy-relevant research
+	•	Collaborate across institutions, disciplines, and communities
+
+⸻
+
+Would you like variations of this message tailored for:
+	•	Undergraduate and graduate student recruitment,
+	•	Researcher/PI collaboration, or
+	•	Public and policy audiences?
+
+I can also help build out full site sections like Projects, Join the Lab, People, or News & Events.
