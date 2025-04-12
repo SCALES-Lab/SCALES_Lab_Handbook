@@ -4,12 +4,13 @@ project:
 
 book:
   title: "SCALES_Lab_Handbook"
-  author: "Norah Jones"
+  author: "William Murrah"
   date: "4/12/2025"
   chapters:
     - index.qmd
     - intro.qmd
     - summary.qmd
+    - conferences.qmd
     - references.qmd
 
 bibliography: references.bib
