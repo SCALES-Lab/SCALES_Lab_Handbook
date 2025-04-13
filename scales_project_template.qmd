@@ -3,7 +3,7 @@ title: "SCALES Project Template"
 format: html
 ---
 
-[SCALES Project Template Github page](https://scales-lab.github.io/SCALES_Lab_Handbook/)
+[SCALES Project Template Github page](https://github.com/SCALES-Lab/scales-project-template)
 
 Understanding the distinction between scripts and modular functions is key to organizing a clean, scalable, and reproducible research project. Here’s a breakdown tailored to your workflow in the SCALES Lab:
 
