@@ -6,10 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="William Murrah">
-<meta name="dcterms.date" content="2025-04-12">
 
-<title>SCALES_Lab_Handbook</title>
+<title>SCALES Project Template</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -22,165 +20,73 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./intro.html" rel="next">
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-626149efe8f5d16e1d391ba177679bf0.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
-<script id="quarto-search-options" type="application/json">{
-  "location": "sidebar",
-  "copy-button": false,
-  "collapse-after": 3,
-  "panel-placement": "start",
-  "type": "textbox",
-  "limit": 50,
-  "keyboard-shortcut": [
-    "f",
-    "/",
-    "s"
-  ],
-  "show-item-context": false,
-  "language": {
-    "search-no-results-text": "No results",
-    "search-matching-documents-text": "matching documents",
-    "search-copy-link-title": "Copy link to search",
-    "search-hide-matches-text": "Hide additional matches",
-    "search-more-match-text": "more match in this document",
-    "search-more-matches-text": "more matches in this document",
-    "search-clear-button-title": "Clear",
-    "search-text-placeholder": "",
-    "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit",
-    "search-label": "Search"
-  }
-}</script>
+<script src="scales_project_template_files/libs/clipboard/clipboard.min.js"></script>
+<script src="scales_project_template_files/libs/quarto-html/quarto.js"></script>
+<script src="scales_project_template_files/libs/quarto-html/popper.min.js"></script>
+<script src="scales_project_template_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="scales_project_template_files/libs/quarto-html/anchor.min.js"></script>
+<link href="scales_project_template_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="scales_project_template_files/libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="scales_project_template_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="scales_project_template_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="scales_project_template_files/libs/bootstrap/bootstrap-973236bd072d72a04ee9cd82dcc9cb29.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 
 
 </head>
 
-<body class="nav-sidebar floating">
+<body class="fullcontent">
 
-<div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
-  <nav class="quarto-secondary-nav">
-    <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-        <i class="bi bi-layout-text-sidebar-reverse"></i>
-      </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Preface</a></li></ol></nav>
-        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-        </a>
-      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
-        <i class="bi bi-search"></i>
-      </button>
-    </div>
-  </nav>
-</header>
-<!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
-<!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
-    <div class="pt-lg-2 mt-2 text-left sidebar-header">
-    <div class="sidebar-title mb-0 py-0">
-      <a href="./">SCALES_Lab_Handbook</a> 
-    </div>
-      </div>
-        <div class="mt-2 flex-shrink-0 align-items-center">
-        <div class="sidebar-search">
-        <div id="quarto-search" class="" title="Search"></div>
-        </div>
-        </div>
-    <div class="sidebar-menu-container"> 
-    <ul class="list-unstyled mt-1">
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Preface</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./intro.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./summary.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Summary</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./conferences.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Conferences</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./references.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">References</span></a>
-  </div>
-</li>
-    </ul>
-    </div>
-</nav>
-<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
-<!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Table of contents</h2>
-   
-  <ul>
-  <li><a href="#preface" id="toc-preface" class="nav-link active" data-scroll-target="#preface">Preface</a>
-  <ul class="collapse">
-  <li><a href="#study-of-cognition-and-learning-in-educational-systems" id="toc-study-of-cognition-and-learning-in-educational-systems" class="nav-link" data-scroll-target="#study-of-cognition-and-learning-in-educational-systems">Study of Cognition and Learning in Educational Systems</a></li>
-  <li><a href="#who-we-are" id="toc-who-we-are" class="nav-link" data-scroll-target="#who-we-are">Who We Are</a></li>
-  <li><a href="#what-we-do" id="toc-what-we-do" class="nav-link" data-scroll-target="#what-we-do">What We Do</a></li>
-  </ul></li>
-  </ul>
-</nav>
-    </div>
-<!-- main -->
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">SCALES_Lab_Handbook</h1>
+<h1 class="title">SCALES Project Template</h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>William Murrah </p>
-          </div>
-  </div>
     
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">April 12, 2025</p>
-    </div>
-  </div>
   
     
   </div>
@@ -190,31 +96,93 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="preface" class="level1 unnumbered">
-<h1 class="unnumbered">Preface</h1>
-<p>Welcome to the SCALES Lab!</p>
-<section id="study-of-cognition-and-learning-in-educational-systems" class="level2">
-<h2 class="anchored" data-anchor-id="study-of-cognition-and-learning-in-educational-systems">Study of Cognition and Learning in Educational Systems</h2>
-<p>The SCALES Lab investigates how educational outcomes emerge from the complex interplay of cognitive, social, institutional, and environmental forces. We approach education not as a collection of isolated interventions or outcomes, but as a dynamic system shaped by feedback loops, structural conditions, and resource distribution.</p>
-<p>Our research focuses on understanding these systems through rigorous, theory-driven modeling — integrating insights from cognitive science, ecology, data science, and education policy. Rather than centering normative agendas, we aim to develop tools and evidence that clarify how learning environments function and how access to educational resources can be broadened across diverse contexts.</p>
+<p>Understanding the distinction between scripts and modular functions is key to organizing a clean, scalable, and reproducible research project. Here’s a breakdown tailored to your workflow in the SCALES Lab:</p>
+<section id="scripts-vs.-modular-functions" class="level2">
+<h2 class="anchored" data-anchor-id="scripts-vs.-modular-functions">Scripts vs.&nbsp;Modular Functions</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 17%">
+<col style="width: 37%">
+<col style="width: 44%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Feature</th>
+<th><strong>Scripts</strong></th>
+<th><strong>Modular Functions</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Purpose</strong></td>
+<td>Perform a specific task or workflow</td>
+<td>Define reusable logic that can be called elsewhere</td>
+</tr>
+<tr class="even">
+<td><strong>Structure</strong></td>
+<td>Linear and executable top-to-bottom</td>
+<td>Encapsulated into functions or classes</td>
+</tr>
+<tr class="odd">
+<td><strong>Typical Location</strong></td>
+<td><code>scripts/</code></td>
+<td><code>src/</code> (e.g., <code>src/r/</code>, <code>src/py/</code>)</td>
+</tr>
+<tr class="even">
+<td><strong>Example Task</strong></td>
+<td><code>clean_data.R</code> runs the full cleaning pipeline</td>
+<td><code>remove_outliers()</code> is used inside that script</td>
+</tr>
+<tr class="odd">
+<td><strong>Reusability</strong></td>
+<td>Low — task-specific</td>
+<td>High — written to be reused in multiple scripts</td>
+</tr>
+<tr class="even">
+<td><strong>Execution</strong></td>
+<td>Run as a whole (<code>python analyze.py</code>)</td>
+<td>Loaded or imported into other files</td>
+</tr>
+<tr class="odd">
+<td><strong>Naming</strong></td>
+<td>Verb-based (e.g., <code>analyze_data.py</code>)</td>
+<td>Noun/action-based (e.g., <code>utils.py</code>, <code>metrics.R</code>)</td>
+</tr>
+</tbody>
+</table>
 </section>
-<section id="who-we-are" class="level2">
-<h2 class="anchored" data-anchor-id="who-we-are">Who We Are</h2>
-<p>SCALES is a collaborative research space for graduate students, faculty, and partners who are curious, rigorous, and ready to rethink how we study education. We welcome scholars from diverse disciplines — especially those who care about educational equity, systems-level change, and developing stronger methods for understanding how learning happens.</p>
+<section id="in-practice" class="level2">
+<h2 class="anchored" data-anchor-id="in-practice">In Practice</h2>
+<p>Example Script: scripts/analyze.py</p>
+<div id="011af68c" class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> src.py.utils <span class="im">import</span> remove_outliers, standardize_scores</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.read_csv(<span class="st">"data/processed/student_data.csv"</span>)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> remove_outliers(df)</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> standardize_scores(df)</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>df.to_csv(<span class="st">"data/processed/cleaned.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Example Function File: src/py/utils.py</p>
+<div id="f6a60148" class="cell" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> remove_outliers(df, threshold<span class="op">=</span><span class="dv">3</span>):</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> df[(df <span class="op">&lt;</span> threshold).<span class="bu">all</span>(axis<span class="op">=</span><span class="dv">1</span>)]</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> standardize_scores(df):</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> (df <span class="op">-</span> df.mean()) <span class="op">/</span> df.std()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 </section>
-<section id="what-we-do" class="level2">
-<h2 class="anchored" data-anchor-id="what-we-do">What We Do</h2>
-<p>• Build ecological models of learning and achievement<br>
-• Use AI and simulation to test educational theories<br>
-• Develop new tools for causal inference and data integration<br>
-• Mentor students in cutting-edge methods and policy-relevant research<br>
-• Collaborate across institutions, disciplines, and communities</p>
+<section id="why-this-matters-for-reproducibility" class="level2">
+<h2 class="anchored" data-anchor-id="why-this-matters-for-reproducibility">Why This Matters for Reproducibility</h2>
+<pre><code>*   Scripts make your research pipeline transparent.
+*   Modular functions make your code clean, testable, and scalable.
+*   This separation supports version control and collaboration — team members can modify or improve functions without altering your analytic workflow scripts.</code></pre>
+<p>⸻</p>
+<p>Would you like me to generate template function and script files in both R and Python as part of the GitHub template repo?</p>
+</section>
 
-
-</section>
-</section>
-
-</main> <!-- /main -->
+</main>
+<!-- /main column -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -632,15 +600,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
-<nav class="page-navigation">
-  <div class="nav-page nav-page-previous">
-  </div>
-  <div class="nav-page nav-page-next">
-      <a href="./intro.html" class="pagination-link" aria-label="Introduction">
-        <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></span> <i class="bi bi-arrow-right-short"></i>
-      </a>
-  </div>
-</nav>
 </div> <!-- /content -->
 
 

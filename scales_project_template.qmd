@@ -1,0 +1,53 @@
+---
+title: "SCALES Project Template"
+format: html
+---
+
+Understanding the distinction between scripts and modular functions is key to organizing a clean, scalable, and reproducible research project. Here’s a breakdown tailored to your workflow in the SCALES Lab:
+
+## Scripts vs. Modular Functions
+
+| Feature              | **Scripts**                                   | **Modular Functions**                                 |
+|----------------------|-----------------------------------------------|--------------------------------------------------------|
+| **Purpose**          | Perform a specific task or workflow           | Define reusable logic that can be called elsewhere     |
+| **Structure**        | Linear and executable top-to-bottom           | Encapsulated into functions or classes                 |
+| **Typical Location** | `scripts/`                                    | `src/` (e.g., `src/r/`, `src/py/`)                     |
+| **Example Task**     | `clean_data.R` runs the full cleaning pipeline| `remove_outliers()` is used inside that script         |
+| **Reusability**      | Low — task-specific                           | High — written to be reused in multiple scripts        |
+| **Execution**        | Run as a whole (`python analyze.py`)          | Loaded or imported into other files                    |
+| **Naming**           | Verb-based (e.g., `analyze_data.py`)          | Noun/action-based (e.g., `utils.py`, `metrics.R`)      |
+
+## In Practice
+
+Example Script: scripts/analyze.py
+```{python}
+#| eval: false
+
+import pandas as pd
+from src.py.utils import remove_outliers, standardize_scores
+
+df = pd.read_csv("data/processed/student_data.csv")
+df = remove_outliers(df)
+df = standardize_scores(df)
+df.to_csv("data/processed/cleaned.csv")
+```
+Example Function File: src/py/utils.py
+
+```{python}
+# | eval: false
+
+def remove_outliers(df, threshold=3):
+    return df[(df < threshold).all(axis=1)]
+
+def standardize_scores(df):
+    return (df - df.mean()) / df.std()
+```
+
+## Why This Matters for Reproducibility
+	*	Scripts make your research pipeline transparent.
+	*	Modular functions make your code clean, testable, and scalable.
+	*	This separation supports version control and collaboration — team members can modify or improve functions without altering your analytic workflow scripts.
+
+⸻
+
+Would you like me to generate template function and script files in both R and Python as part of the GitHub template repo?
