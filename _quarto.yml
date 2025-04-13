@@ -3,7 +3,7 @@ project:
   output-dir: docs
 
 book:
-  title: "SCALES_Lab_Handbook"
+  title: "SCALES Lab Handbook"
   author: "William Murrah"
   date: "4/12/2025"
   chapters:
@@ -11,6 +11,7 @@ book:
     - intro.qmd
     - summary.qmd
     - conferences.qmd
+    - scales_project_template.qmd
     - references.qmd
 
 bibliography: references.bib

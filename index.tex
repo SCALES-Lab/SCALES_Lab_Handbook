@@ -66,6 +66,46 @@
 \fi
 \makeatother
 
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{241,243,245}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.40,0.45,0.13}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\BuiltInTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.13,0.47,0.30}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{\textit{#1}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{\textit{#1}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\ExtensionTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.28,0.35,0.67}{#1}}
+\newcommand{\ImportTok}[1]{\textcolor[rgb]{0.00,0.46,0.62}{#1}}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\RegionMarkerTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.13,0.47,0.30}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.13,0.47,0.30}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.07,0.07,0.07}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.13,0.47,0.30}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{\textit{#1}}}
 
 \providecommand{\tightlist}{%
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}\usepackage{longtable,booktabs,array}
@@ -178,7 +218,7 @@
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
 \urlstyle{same} % disable monospaced font for URLs
 \hypersetup{
-  pdftitle={SCALES\_Lab\_Handbook},
+  pdftitle={SCALES Lab Handbook},
   pdfauthor={William Murrah},
   colorlinks=true,
   linkcolor={blue},
@@ -188,7 +228,7 @@
   pdfcreator={LaTeX via pandoc}}
 
 
-\title{SCALES\_Lab\_Handbook}
+\title{SCALES Lab Handbook}
 \author{William Murrah}
 \date{2025-04-12}
 
@@ -209,32 +249,32 @@
 
 \markboth{Preface}{Preface}
 
-Absolutely! Here's a warm, compelling introduction you can use on your
-SCALES Lab website homepage --- tailored to appeal to students, faculty,
-and collaborators:
+Welcome to the SCALES Lab!
 
-⸻
+\section*{Study of Cognition and Learning in Educational
+Systems}\label{study-of-cognition-and-learning-in-educational-systems}
+\addcontentsline{toc}{section}{Study of Cognition and Learning in
+Educational Systems}
 
-Welcome to the SCALES Lab
+\markright{Study of Cognition and Learning in Educational Systems}
 
-Study of Cognition and Learning in Educational Systems
+The SCALES Lab investigates how educational outcomes emerge from the
+complex interplay of cognitive, social, institutional, and environmental
+forces. We approach education not as a collection of isolated
+interventions or outcomes, but as a dynamic system shaped by feedback
+loops, structural conditions, and resource distribution.
 
-At the SCALES Lab, we believe that education is more than a set of
-classrooms and policies --- it's a dynamic, interdependent system where
-cognition, community, resources, and environments interact in complex
-ways. Our mission is to advance research that helps us better understand
-this complexity and, ultimately, use that understanding to improve
-educational outcomes.
+Our research focuses on understanding these systems through rigorous,
+theory-driven modeling --- integrating insights from cognitive science,
+ecology, data science, and education policy. Rather than centering
+normative agendas, we aim to develop tools and evidence that clarify how
+learning environments function and how access to educational resources
+can be broadened across diverse contexts.
 
-We combine cutting-edge tools from cognitive science, ecology, AI and
-machine learning, and education policy to model how learning unfolds
-within real-world systems. Whether we're simulating school environments
-with agent-based models, analyzing national datasets using Bayesian
-methods, or using AI to discover new causal relationships, our goal is
-always the same: to build theory-driven, policy-relevant research that
-reflects the realities of students, educators, and communities.
+\section*{Who We Are}\label{who-we-are}
+\addcontentsline{toc}{section}{Who We Are}
 
-Who We Are
+\markright{Who We Are}
 
 SCALES is a collaborative research space for graduate students, faculty,
 and partners who are curious, rigorous, and ready to rethink how we
@@ -243,20 +283,16 @@ especially those who care about educational equity, systems-level
 change, and developing stronger methods for understanding how learning
 happens.
 
-What We Do • Build ecological models of learning and achievement • Use
-AI and simulation to test educational theories • Develop new tools for
-causal inference and data integration • Mentor students in cutting-edge
-methods and policy-relevant research • Collaborate across institutions,
-disciplines, and communities
+\section*{What We Do}\label{what-we-do}
+\addcontentsline{toc}{section}{What We Do}
 
-⸻
+\markright{What We Do}
 
-Would you like variations of this message tailored for: • Undergraduate
-and graduate student recruitment, • Researcher/PI collaboration, or •
-Public and policy audiences?
-
-I can also help build out full site sections like Projects, Join the
-Lab, People, or News \& Events.
+• Build ecological models of learning and achievement\\
+• Use AI and simulation to test educational theories\\
+• Develop new tools for causal inference and data integration\\
+• Mentor students in cutting-edge methods and policy-relevant research\\
+• Collaborate across institutions, disciplines, and communities
 
 \bookmarksetup{startatroot}
 
@@ -386,6 +422,94 @@ research & 2026 (Biennial) & TBD & Varies & Regular: \$100; Student:
 \$50 & \href{https://onlinelibrary.wiley.com/journal/1751228x}{Mind,
 Brain, and Education} & 2.5 \\
 \end{longtable}
+
+\bookmarksetup{startatroot}
+
+\chapter{SCALES Project Template}\label{scales-project-template}
+
+\href{https://scales-lab.github.io/SCALES_Lab_Handbook/}{SCALES Project
+Template Github page}
+
+Understanding the distinction between scripts and modular functions is
+key to organizing a clean, scalable, and reproducible research project.
+Here's a breakdown tailored to your workflow in the SCALES Lab:
+
+\section{Scripts vs.~Modular
+Functions}\label{scripts-vs.-modular-functions}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.1760}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3760}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.4480}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Feature
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Scripts}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Modular Functions}
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\textbf{Purpose} & Perform a specific task or workflow & Define reusable
+logic that can be called elsewhere \\
+\textbf{Structure} & Linear and executable top-to-bottom & Encapsulated
+into functions or classes \\
+\textbf{Typical Location} & \texttt{scripts/} & \texttt{src/} (e.g.,
+\texttt{src/r/}, \texttt{src/py/}) \\
+\textbf{Example Task} & \texttt{clean\_data.R} runs the full cleaning
+pipeline & \texttt{remove\_outliers()} is used inside that script \\
+\textbf{Reusability} & Low --- task-specific & High --- written to be
+reused in multiple scripts \\
+\textbf{Execution} & Run as a whole (\texttt{python\ analyze.py}) &
+Loaded or imported into other files \\
+\textbf{Naming} & Verb-based (e.g., \texttt{analyze\_data.py}) &
+Noun/action-based (e.g., \texttt{utils.py}, \texttt{metrics.R}) \\
+\end{longtable}
+
+\section{In Practice}\label{in-practice}
+
+Example Script: scripts/analyze.py
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\ImportTok{import}\NormalTok{ pandas }\ImportTok{as}\NormalTok{ pd}
+\ImportTok{from}\NormalTok{ src.py.utils }\ImportTok{import}\NormalTok{ remove\_outliers, standardize\_scores}
+
+\NormalTok{df }\OperatorTok{=}\NormalTok{ pd.read\_csv(}\StringTok{"data/processed/student\_data.csv"}\NormalTok{)}
+\NormalTok{df }\OperatorTok{=}\NormalTok{ remove\_outliers(df)}
+\NormalTok{df }\OperatorTok{=}\NormalTok{ standardize\_scores(df)}
+\NormalTok{df.to\_csv(}\StringTok{"data/processed/cleaned.csv"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+Example Function File: src/py/utils.py
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{def}\NormalTok{ remove\_outliers(df, threshold}\OperatorTok{=}\DecValTok{3}\NormalTok{):}
+    \ControlFlowTok{return}\NormalTok{ df[(df }\OperatorTok{\textless{}}\NormalTok{ threshold).}\BuiltInTok{all}\NormalTok{(axis}\OperatorTok{=}\DecValTok{1}\NormalTok{)]}
+
+\KeywordTok{def}\NormalTok{ standardize\_scores(df):}
+    \ControlFlowTok{return}\NormalTok{ (df }\OperatorTok{{-}}\NormalTok{ df.mean()) }\OperatorTok{/}\NormalTok{ df.std()}
+\end{Highlighting}
+\end{Shaded}
+
+\section{Why This Matters for
+Reproducibility}\label{why-this-matters-for-reproducibility}
+
+\begin{verbatim}
+*   Scripts make your research pipeline transparent.
+*   Modular functions make your code clean, testable, and scalable.
+*   This separation supports version control and collaboration — team members can modify or improve functions without altering your analytic workflow scripts.
+\end{verbatim}
+
+⸻
+
+Would you like me to generate template function and script files in both
+R and Python as part of the GitHub template repo?
 
 \bookmarksetup{startatroot}
 
