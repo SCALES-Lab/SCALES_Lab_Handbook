@@ -1,0 +1,102 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "SCALES Lab Handbook",
+    "section": "",
+    "text": "Preface\nWelcome to the SCALES Lab!",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "index.html#study-of-cognition-and-learning-in-educational-systems",
+    "href": "index.html#study-of-cognition-and-learning-in-educational-systems",
+    "title": "SCALES Lab Handbook",
+    "section": "Study of Cognition and Learning in Educational Systems",
+    "text": "Study of Cognition and Learning in Educational Systems\nThe SCALES Lab investigates how educational outcomes emerge from the complex interplay of cognitive, social, institutional, and environmental forces. We approach education not as a collection of isolated interventions or outcomes, but as a dynamic system shaped by feedback loops, structural conditions, and resource distribution.\nOur research focuses on understanding these systems through rigorous, theory-driven modeling — integrating insights from cognitive science, ecology, data science, and education policy. Rather than centering normative agendas, we aim to develop tools and evidence that clarify how learning environments function and how access to educational resources can be broadened across diverse contexts.",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "index.html#who-we-are",
+    "href": "index.html#who-we-are",
+    "title": "SCALES Lab Handbook",
+    "section": "Who We Are",
+    "text": "Who We Are\nSCALES is a collaborative research space for graduate students, faculty, and partners who are curious, rigorous, and ready to rethink how we study education. We welcome scholars from diverse disciplines — especially those who care about educational equity, systems-level change, and developing stronger methods for understanding how learning happens.",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "index.html#what-we-do",
+    "href": "index.html#what-we-do",
+    "title": "SCALES Lab Handbook",
+    "section": "What We Do",
+    "text": "What We Do\n• Build ecological models of learning and achievement\n• Use AI and simulation to test educational theories\n• Develop new tools for causal inference and data integration\n• Mentor students in cutting-edge methods and policy-relevant research\n• Collaborate across institutions, disciplines, and communities",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "summary.html",
+    "href": "summary.html",
+    "title": "2  Summary",
+    "section": "",
+    "text": "In summary, this book has no content whatsoever.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Summary</span>"
+    ]
+  },
+  {
+    "objectID": "conferences.html",
+    "href": "conferences.html",
+    "title": "3  Conferences",
+    "section": "",
+    "text": "SCALES Lab Recommended Professioal Organizations and Conferences\n\n\nOrganization\nResearch Alignment\nConference Timing\nSubmission Deadline\nLocation\nAnnual Dues\nPrimary Journal\nImpact Factor\n\n\n\n\nCognitive Science Society (CogSci)\nCognitive science, computational modeling, theory development\nJuly 30 – Aug 2, 2025\nFeb 3, 2025\nSan Francisco, CA\nRegular: $105; Student: $55\nCognitive Science\n2.3\n\n\nInternational Society of the Learning Sciences (ISLS)\nLearning sciences, educational technology, collaborative learning\nJune 10–13, 2025\nNov 27, 2024\nHelsinki, Finland\nRegular: $100; Student: $50\nJournal of the Learning Sciences\n4.0\n\n\nInternational Society for Systems Sciences (ISSS)\nSystems thinking, ecological modeling, interdisciplinary research\nJuly 2025\nMar–Apr 2025\nVaries annually\nRegular: $150; Student: $50\nSystems Research and Behavioral Science\n1.6\n\n\nInternational Congress on Agent-Based Modeling (ICABM)\nAgent-based modeling, simulation, complex systems\nVaries\nVaries\nVaries\nRegular: $100; Student: $50\nJournal of Artificial Societies and Social Simulation\n2.0\n\n\nAmerican Educational Research Association (AERA)\nEducation research, policy, methodology\nApr 23–27, 2025\nJul–Aug 2024\nDenver, CO\nRegular: $250; Student: $75\nEducational Researcher\n5.0\n\n\nAssociation for Education Finance and Policy (AEFP)\nEducation finance, policy analysis, quantitative methods\nMarch 2025\nOct–Nov 2024\nVaries annually\nRegular: $150; Student: $50\nEducation Finance and Policy\n2.1\n\n\nAssociation for the Advancement of Artificial Intelligence (AAAI)\nArtificial intelligence, machine learning, AI in education\nFeb 25 – Mar 4, 2025\nAug 2024\nPhiladelphia, PA\nRegular: $125; Student: $50\nAI Magazine\n1.7\n\n\nInternational Educational Data Mining Society (IEDMS)\nEducational data mining, learning analytics, AI applications\nJuly 2025\nJan–Feb 2025\nVaries annually\nRegular: $100; Student: $50\nJournal of Educational Data Mining\n1.5\n\n\nSociety for the Advancement of Socio-Economics (SASE)\nSocio-economic systems, interdisciplinary policy research\nJune 2025\nJan–Feb 2025\nVaries annually\nRegular: $150; Student: $50\nSocio-Economic Review\n3.2\n\n\nSociety for Research on Educational Effectiveness (SREE)\nEducational effectiveness, causal inference, policy evaluation\nMarch 2025\nSept–Oct 2024\nVaries annually\nRegular: $200; Student: $75\nJournal of Research on Educational Effectiveness\n2.9\n\n\nInternational Mind, Brain, and Education Society (IMBES)\nCognitive neuroscience, education, interdisciplinary research\n2026 (Biennial)\nTBD\nVaries\nRegular: $100; Student: $50\nMind, Brain, and Education\n2.5",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Conferences</span>"
+    ]
+  },
+  {
+    "objectID": "scales_project_template.html",
+    "href": "scales_project_template.html",
+    "title": "4  SCALES Project Template",
+    "section": "",
+    "text": "4.1 Scripts vs. Modular Functions\nSCALES Project Template Github page\nUnderstanding the distinction between scripts and modular functions is key to organizing a clean, scalable, and reproducible research project. Here’s a breakdown tailored to your workflow in the SCALES Lab:",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>SCALES Project Template</span>"
+    ]
+  },
+  {
+    "objectID": "scales_project_template.html#scripts-vs.-modular-functions",
+    "href": "scales_project_template.html#scripts-vs.-modular-functions",
+    "title": "4  SCALES Project Template",
+    "section": "",
+    "text": "Feature\nScripts\nModular Functions\n\n\n\n\nPurpose\nPerform a specific task or workflow\nDefine reusable logic that can be called elsewhere\n\n\nStructure\nLinear and executable top-to-bottom\nEncapsulated into functions or classes\n\n\nTypical Location\nscripts/\nsrc/ (e.g., src/r/, src/py/)\n\n\nExample Task\nclean_data.R runs the full cleaning pipeline\nremove_outliers() is used inside that script\n\n\nReusability\nLow — task-specific\nHigh — written to be reused in multiple scripts\n\n\nExecution\nRun as a whole (python analyze.py)\nLoaded or imported into other files\n\n\nNaming\nVerb-based (e.g., analyze_data.py)\nNoun/action-based (e.g., utils.py, metrics.R)",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>SCALES Project Template</span>"
+    ]
+  },
+  {
+    "objectID": "scales_project_template.html#in-practice",
+    "href": "scales_project_template.html#in-practice",
+    "title": "4  SCALES Project Template",
+    "section": "4.2 In Practice",
+    "text": "4.2 In Practice\nExample Script: scripts/analyze.py\n\nimport pandas as pd\nfrom src.py.utils import remove_outliers, standardize_scores\n\ndf = pd.read_csv(\"data/processed/student_data.csv\")\ndf = remove_outliers(df)\ndf = standardize_scores(df)\ndf.to_csv(\"data/processed/cleaned.csv\")\n\nExample Function File: src/py/utils.py\n\ndef remove_outliers(df, threshold=3):\n    return df[(df &lt; threshold).all(axis=1)]\n\ndef standardize_scores(df):\n    return (df - df.mean()) / df.std()",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>SCALES Project Template</span>"
+    ]
+  },
+  {
+    "objectID": "scales_project_template.html#why-this-matters-for-reproducibility",
+    "href": "scales_project_template.html#why-this-matters-for-reproducibility",
+    "title": "4  SCALES Project Template",
+    "section": "4.3 Why This Matters for Reproducibility",
+    "text": "4.3 Why This Matters for Reproducibility\n*   Scripts make your research pipeline transparent.\n*   Modular functions make your code clean, testable, and scalable.\n*   This separation supports version control and collaboration — team members can modify or improve functions without altering your analytic workflow scripts.\n⸻\nWould you like me to generate template function and script files in both R and Python as part of the GitHub template repo?",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>SCALES Project Template</span>"
+    ]
+  }
+]
